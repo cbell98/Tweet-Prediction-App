@@ -2,12 +2,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 # Create a DB Object
-
 DB = SQLAlchemy()
-
 
 # Create a table with a specific schema
 # We will do that by creating a python class.
+
 
 class User(DB.Model):
     # Two columns inside of our user table
@@ -20,7 +19,6 @@ class User(DB.Model):
 
 
 class Tweet(DB.Model):
-
     # ID Column Schema
     id = DB.Column(DB.BigInteger, primary_key=True, nullable=False)
     # Text Column Schema
